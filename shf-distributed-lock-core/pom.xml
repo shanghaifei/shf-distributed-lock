@@ -32,5 +32,15 @@
             <groupId>com.101tec</groupId>
             <artifactId>zkclient</artifactId>
         </dependency>
+        <!-- jetcd-core依赖 -->
+        <dependency>
+            <groupId>io.etcd</groupId>
+            <artifactId>jetcd-core</artifactId>
+        </dependency>
+        <!-- etcd-java依赖 -->
+        <dependency>
+            <groupId>com.ibm.etcd</groupId>
+            <artifactId>etcd-java</artifactId>
+        </dependency>
     </dependencies>
 </project>

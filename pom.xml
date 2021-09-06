@@ -21,6 +21,12 @@
         <zookeeper.version>3.6.0</zookeeper.version>
         <!-- zookeeper client版本 -->
         <zkclient.version>0.11</zkclient.version>
+        <!-- jetcd-core版本 -->
+        <jetcd-core.version>0.5.8</jetcd-core.version>
+        <!-- etcd-java版本 -->
+        <etcd-java.version>0.0.18</etcd-java.version>
+        <!-- netty版本 -->
+        <netty.version>4.1.52.Final</netty.version>
     </properties>
 
     <dependencyManagement>
@@ -42,6 +48,45 @@
                 <groupId>com.101tec</groupId>
                 <artifactId>zkclient</artifactId>
                 <version>${zkclient.version}</version>
+            </dependency>
+            <!-- jetcd-core依赖 -->
+            <dependency>
+                <groupId>io.etcd</groupId>
+                <artifactId>jetcd-core</artifactId>
+                <version>${jetcd-core.version}</version>
+            </dependency>
+            <!-- etcd-java依赖 -->
+            <dependency>
+                <groupId>com.ibm.etcd</groupId>
+                <artifactId>etcd-java</artifactId>
+                <version>${etcd-java.version}</version>
+            </dependency>
+
+            <!-- 解决netty版本冲突问题 -->
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-buffer</artifactId>
+                <version>${netty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-codec</artifactId>
+                <version>${netty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-transport</artifactId>
+                <version>${netty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-common</artifactId>
+                <version>${netty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-handler</artifactId>
+                <version>${netty.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
